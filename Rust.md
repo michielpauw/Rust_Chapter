@@ -33,8 +33,7 @@ Let's be very vague about this:
 - Rust is not a functional programming language, but...
   - certain aspects of functional programming are available and even encouraged (closures, higher order/first class functions);
   - other aspects are lacking (tail recursion). Many Rustaceans do use Rust in a functional way.
-- Depending on the definition of Object Oriented Programming, Rust is or is not an Object Oriented Programming language:
-  - inheritance
+- Depending on the definition of Object Oriented Programming, Rust is or is not an Object Oriented Programming language
 - Rust is a imperative programming language.
 
 ## Cargo
