@@ -86,8 +86,6 @@ fn main() {
   let bunnies = 2; // Change to let mut bunnies = 2;
   bunnies = 6; // Error!
   println!("bunnies = {}", bunnies);
-  let mut hares = 5;
-  hares = 8;
   let (mut cow, milk) = (4, 2); // In tuples you add mut to elements of the tuple separately
   cow = 6;
 }
@@ -109,9 +107,9 @@ Currently, the arity of tuples is 12 at max.
 
 ### Constants
 
-- `const` instead of `let`;
-- SCREAMING_SNAKE_CASE for the names;
-- Type annotation is required;
+- `const` instead of `let`
+- SCREAMING_SNAKE_CASE for the names
+- Type annotation is required
 - Value must be a constant expression that can be determined at compile time.
 
 ```rust
@@ -200,7 +198,7 @@ for num in 0..50 { // use ..= for inclusive =
 
 ### Scopes
 
-Every data value in Rust has an owning scope. So first question to ask: what is a scope? A scope is represented by any block of code beginning with `{` and ending with `}`. The scope is the chunk of memory where the block's variables are stored.
+A scope is represented by any block of code beginning with `{` and ending with `}`. The scope is the chunk of memory where the block's variables are stored.
 
 When Rust is done with a scope, all of the data values that the scope owns are discarded and the memory that was used to store them is freed up for other uses. This includes memory that was allocated on the heap. The time between when a value is created and the time when its owning scope is done is called the lifetime of the value.
 
@@ -361,10 +359,10 @@ To use a struct after we’ve defined it, we create an instance of that struct b
 ```rust
 // Instantiating is straightforward:
 let red_fox = Fox {
-  name: "Red fox",
+  name: "Red fox".to_string(),
   enemy: true,
   life: 70,
-}
+};
 ```
 
 You can also implement an associated function to use as a constructor
@@ -488,3 +486,5 @@ https://adventofcode.com/2019/day/2
 I would recommend
 
 https://doc.rust-lang.org/book/ch18-00-patterns.html
+https://doc.rust-lang.org/std/vec/struct.Vec.html
+https://doc.rust-lang.org/std/io/index.html
