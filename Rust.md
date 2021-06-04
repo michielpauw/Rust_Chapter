@@ -484,6 +484,6 @@ https://adventofcode.com/2019/day/2
 
 I would recommend
 
-https://doc.rust-lang.org/book/ch18-00-patterns.html
-https://doc.rust-lang.org/std/vec/struct.Vec.html
+https://doc.rust-lang.org/book/ch18-00-patterns.html  
+https://doc.rust-lang.org/std/vec/struct.Vec.html  
 https://doc.rust-lang.org/std/io/index.html
