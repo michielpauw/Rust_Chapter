@@ -165,7 +165,7 @@ In the previous meeting we talked about traits: interface like functionality, th
 ```rust
 trait Summary {
     fn summarize(&self) -> String {
-        String::from("(Read more...)") // A trait can have a default implementation
+        // String::from("(Read more...)") // A trait can have a default implementation
     }
 }
 
