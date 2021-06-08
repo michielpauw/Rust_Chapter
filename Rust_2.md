@@ -164,9 +164,9 @@ In the previous meeting we talked about traits: interface like functionality, th
 
 ```rust
 trait Summary {
-    fn summarize(&self) -> String {
-        String::from("(Read more...)") // A trait can have a default implementation
-    }
+    // fn summarize(&self) -> String {
+    //     String::from("(Read more...)") // A trait can have a default implementation
+    // }
 }
 
 struct NewsArticle {
@@ -176,7 +176,11 @@ struct NewsArticle {
     pub content: String,
 }
 
-impl Summary for NewsArticle {} // We do not replace the default implementation
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        format!("{}, by {} ({})", self.headline, self.author, self.location)
+    }
+} // We do not replace the default implementation
 
 struct Tweet {
     pub username: String,
@@ -339,19 +343,8 @@ let add_one_v4 = |x|               x + 1  ; // Closure without optional curly br
 
 For more information: https://doc.rust-lang.org/book/ch13-01-closures.html
 
-### Iterators
-
-## Concurrency
-
-Concurrency can improve performance. But problems may also arise. For example:
-
-- Race conditions, where threads are accessing data or resources in an inconsistent order
-- Deadlocks, where two threads are waiting for each other to finish using a resource the other thread has, preventing both threads from continuing
-- Bugs that happen only in certain situations and are hard to reproduce and fix reliably
-
 ## Still to cover
 
 - Testing
-- Functional programming: iterators and closures
+- Concurrency
 - Macros
-- Pattern matching
